@@ -2,9 +2,9 @@
 	
 	require_once 'foguete.php';
 
-	$pass = $_GET["gasolina"];
-	$g = $_GET["piloto"];
-	$pil = $_GET["passageiros"];
+	$g = $_GET["gasolina"];
+	$pil = $_GET["piloto"];
+	$pass = $_GET["passageiros"];
 
 	$foguete = new Foguete;
 
@@ -13,8 +13,11 @@
 	$passageiros = $foguete->passageiros($pass);
 
 
+
 	echo $gas. "<br>";
 	echo $piloto. "<br>";
 	echo $passageiros. "<br>";
 
+
+	echo "<script>location.href='index.php';</script>"; 
  ?>

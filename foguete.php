@@ -27,19 +27,17 @@
 				return 'Número inviável de pilotos';
 			} else if ($a < 3){
 				return 'Número ideal de pilotos';
-			} else{
-				return 'Festa na cabine';
-			}
+			} 
 		}
 
 		public function passageiros($pass){
 
-			if ($a < 0) {
+			if ($pass < 0) {
 				return 'N fode n fião';
-			}else if ($a < 200){
-				return 'Niceeeeeee';
+			}else if ($pass < 200){
+				return 'População ideal';
 			}else {
-				return 'Azedou';
+				return 'Lotação atingida';
 			}
 
 		}
@@ -78,20 +76,40 @@
 		}
 
 		public function banheiros($a){
-			if (($a/3) < )
+			if (($a/3) < $pass){
+				return 'Não há banheiros o suficiente';
+			} else if ($a/3 == $pass){
+				return 'Número ideal de banheiros';
+			}else {
+				return 'Gastos exessivos com banheiros';
+			}
 		}
 
-		public function armamento{
-
+		public function armamento($a){
+			if ($a < 1) {
+				return 'Morreram em um ataque alien';
+			}else if ($a < 100){
+				return 'Ideal para ataques';
+			}else {
+				return 'F*** YOU M******';
+			}
 		}
 
 		public function camas ($a){
-
+			if($a < $pass){
+				return 'Faltam cama para os passageiros';
+			} else if ($a = $pass){
+				return 'Número ideal de camas';
+			} else {
+				return 'Gastos exessivos';
+			}
 		}
 
 		public function mantimentos($a, $b, $c){
 			if ($a == 'arroz' && $b == 'feijão' && $c == 'batata') {
-				
+				return 'Boas escolhas';
+			} else {
+				return 'Morreu de fome';
 			}
 		}
 	}
